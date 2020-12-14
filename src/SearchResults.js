@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Book from './Book';
 
 class SearchResults extends Component {
+  static propTypes = {
+    results: PropTypes.array.isRequired,
+    books: PropTypes.array.isRequired,
+    shelves: PropTypes.array.isRequired,
+    updateShelf: PropTypes.func,
+  }
+
   updateShelf = shelf => {
     if (this.props.updateShelf) {
       this.props.updateShelf({book: shelf[0], shelf: shelf[1]});

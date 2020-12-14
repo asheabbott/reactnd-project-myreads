@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-const ShelfTitle = props => {
-  const {shelf} = props;
+class ShelfTitle extends Component {
+  static propTypes = {
+    shelf: PropTypes.object.isRequired,
+  }
 
-  return (
-    <h2 className='bookshelf-title'>{shelf.title}</h2>
-  );
+  render() {
+    const {shelf} = this.props;
+
+    return (
+      <h2 className='bookshelf-title'>{shelf.title}</h2>
+    );
+  }
 }
 
 export default ShelfTitle;

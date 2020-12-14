@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import MainHeader from './MainHeader';
 import MainContent from './MainContent';
 
 class Main extends Component {
+  static propTypes = {
+    books: PropTypes.array.isRequired,
+    shelves: PropTypes.array.isRequired,
+    updateShelf: PropTypes.func,
+  }
+
   updateShelf = data => {
     if (this.props.updateShelf) {
       this.props.updateShelf(data);

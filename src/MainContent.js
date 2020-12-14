@@ -1,7 +1,14 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Shelf from './Shelf';
 
 class MainContent extends Component {
+  static propTypes = {
+    books: PropTypes.array.isRequired,
+    shelves: PropTypes.array.isRequired,
+    updateShelf: PropTypes.func,
+  }
+
   updateShelf = data => {
     if (this.props.updateShelf) {
       this.props.updateShelf(data);
@@ -13,7 +20,7 @@ class MainContent extends Component {
 
     return (
       <div className='list-books-content'>
-        {shelves.map((shelf, index) => (
+        {shelves.map((shelf) => (
           <Shelf 
             key={shelf.id} 
             books={books} 

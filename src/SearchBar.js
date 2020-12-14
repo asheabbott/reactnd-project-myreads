@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import * as BooksAPI from './BooksAPI';
 
 class SearchBar extends Component {
+  static propTypes = {
+    results: PropTypes.func,
+  }
+
   state = {
     query: '',
   }
