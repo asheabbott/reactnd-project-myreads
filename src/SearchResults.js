@@ -9,22 +9,18 @@ class SearchResults extends Component {
   }
 
   render() {
-    console.log(this.props.results);
-
-    const {results, books, shelves, shelf} = this.props;
-
-    // console.log(shelf);
+    const {results, books, shelves} = this.props;
     
     return (
-      <div className="search-books-results">
-        <ol className="books-grid">
+      <div className='search-books-results'>
+        <ol className='books-grid'>
           {results.map((book, index) => {
             let shelfID = '';
-            {/* console.log(books.includes(book)); */}
+
             books.some(indiv => indiv.id === book.id) ? shelfID = books.filter(indiv => indiv.id === book.id)[0].shelf : shelfID = 'none';
 
-            return <Book 
-              key={book.id} 
+            return <Book
+              key={book.id}
               shelves={shelves}
               shelf={shelfID}
               book={book}

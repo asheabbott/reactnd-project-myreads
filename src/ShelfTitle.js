@@ -1,13 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class ShelfTitle extends Component {
-  render() {
-    const {shelf} = this.props;
+const ShelfTitle = props => {
+  const {shelf} = props;
 
-    return (
-      <h2 className="bookshelf-title">{shelf.title}</h2>
-    );
-  }
+  return (
+    <h2 className='bookshelf-title'>{shelf.title}</h2>
+  );
 }
 
 export default ShelfTitle;

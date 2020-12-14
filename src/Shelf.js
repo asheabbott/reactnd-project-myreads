@@ -6,7 +6,6 @@ class Shelf extends Component {
   updateShelf = data => {
     if (this.props.updateShelf) {
       this.props.updateShelf(data);
-      // console.log(shelf);
     }
   }
 
@@ -15,9 +14,9 @@ class Shelf extends Component {
 
     return (
       <div>
-        <div className="bookshelf">
+        <div className='bookshelf'>
           <ShelfTitle shelf={shelf} />
-          <ShelfBooks 
+          <ShelfBooks
             books={books}
             shelves={shelves}
             shelf={shelf}

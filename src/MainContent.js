@@ -12,7 +12,7 @@ class MainContent extends Component {
     const {books, shelves} = this.props;
 
     return (
-      <div className="list-books-content">
+      <div className='list-books-content'>
         {shelves.map((shelf, index) => (
           <Shelf 
             key={shelf.id} 

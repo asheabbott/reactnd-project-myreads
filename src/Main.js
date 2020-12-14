@@ -14,15 +14,15 @@ class Main extends Component {
     const {books, shelves} = this.props;
 
     return (
-      <div className="list-books">
+      <div className='list-books'>
         <MainHeader />
-        <MainContent 
+        <MainContent
           books={books}
           shelves={shelves}
           updateShelf={this.updateShelf} />
 
-        <div className="open-search">
-          <Link 
+        <div className='open-search'>
+          <Link
             className='open-search-button'
             to='/search'>
             Add a book

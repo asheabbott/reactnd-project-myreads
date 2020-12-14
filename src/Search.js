@@ -16,28 +16,20 @@ class Search extends Component {
   searchResults = resultsArray => {
     this.setState({
       results: resultsArray
-    },
-    () => {
-      // TODO: callback code
     });
   }
 
   render() {
     const {results} = this.state;
-    const {books, shelves, shelf} = this.props;
-
-    // console.log(shelves);
-
-    // TODO: get book listings working in search results (including fix copy / paste props)
+    const {books, shelves} = this.props;
 
     return (
-      <div className="search-books">
+      <div className='search-books'>
         <SearchBar results={this.searchResults} />
-        <SearchResults 
-          results={results} 
+        <SearchResults
+          results={results}
           books={books}
           shelves={shelves}
-          shelf={shelf}
           updateShelf={this.updateShelf} />
       </div>
     );
