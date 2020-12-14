@@ -26,8 +26,7 @@ class Book extends Component {
       <li>
         <div className='book'>
           <div className='book-top'>
-            {/* TODO: Handle image dimensions */}
-            <div className='book-cover' style={{ width: 128, height: 193, backgroundImage: `url(${bookCover})` }}></div>
+            <div className='book-cover' style={{ backgroundImage: `url(${bookCover})` }}></div>
             <div className='book-shelf-changer'>
               <select value={shelf} onChange={this.handleChange}>
                 <option value='move' disabled>Move to...</option>
